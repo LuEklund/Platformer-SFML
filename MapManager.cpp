@@ -40,7 +40,6 @@ bool MapManager::initMapManager(Player *player, std::vector<std::unique_ptr<Enti
 			));
 		}
 	}
-	// m_mapSprites[0].setTextureRect(sf::IntRect(0,16,16,16));
 	for (unsigned short x = 0; x < gbl::MAP::COLUMNS; x++)
 	{
 		for (unsigned short y = 0; y < gbl::MAP::ROWS; y++)
@@ -64,9 +63,6 @@ bool MapManager::initMapManager(Player *player, std::vector<std::unique_ptr<Enti
 					static_cast<float>(gbl::MAP::CELL_SIZE * x),
 					static_cast<float>( gbl::MAP::CELL_SIZE * (y - gbl::MAP::ROWS/3)));
 				m_map[x][y] = gbl::Cell::EMPTY;
-
-				// m_map[x][y] = 'P';
-				// i_mario.set_position(CELL_SIZE * a, CELL_SIZE * (b - map_height));
 			}
 			else if (sf::Color(210, 100, 0) == pixel)
 			{
@@ -75,7 +71,6 @@ bool MapManager::initMapManager(Player *player, std::vector<std::unique_ptr<Enti
 					*player,
 					static_cast<float>(gbl::MAP::CELL_SIZE * x),
 					static_cast<float>( gbl::MAP::CELL_SIZE * (y - gbl::MAP::ROWS/3))));
-				// i_enemies.push_back(std::make_shared<Goomba>(sf::Color(0, 0, 85) == i_background_color, CELL_SIZE * a, CELL_SIZE * (b - map_height)));
 			}//CLOUDS
 			else if (sf::Color(240, 255, 255) == pixel)
 				m_map[x][y] = gbl::Cell::CLOUD_TOP_LEFT;
@@ -92,12 +87,7 @@ bool MapManager::initMapManager(Player *player, std::vector<std::unique_ptr<Enti
 			else
 			{
 				m_map[x][y] = gbl::Cell::EMPTY;
-				// i_map_manager.set_map_cell(a, b, Cell::Empty);
 			}
-			// if (x == 23)
-			// 	return false;
-			// std::cout << "is: "  << m_map[x][y]
-			// << "color R: " << (int)pixel.r << ", G:" << (int)pixel.g << ", B: " << (int)pixel.b << std::endl;
 		}
 	}
 	return (true);

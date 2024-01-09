@@ -15,7 +15,7 @@ bool Menu::initMenu(sf::Font &font)
 	sf::Vector2f	windowSize = static_cast<sf::Vector2f>(m_Window.getSize());
 	m_header.setFont(font);
 	m_header.setFillColor(sf::Color::White);
-	m_header.setString("Mario ripoff");
+	m_header.setString("Not Mario");
 	m_header.setCharacterSize(50);
 	m_header.setPosition(
 		windowSize.x/2 - m_header.getGlobalBounds().width / 2,

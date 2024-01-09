@@ -36,7 +36,7 @@ Player::~Player()
 //inits
 bool Player::initPlayer()
 {
-	if (!m_texture.loadFromFile("assets/MarioWalk.png"))
+	if (!m_texture.loadFromFile("assets/PlayerWalk.png"))
 	{
 		std::cout << "FAILED to load player texture" << std::endl;
 		return false;
