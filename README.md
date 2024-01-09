@@ -13,7 +13,7 @@ kill enemies by jumping on them or shooting them. Once you have killed enough en
 
 Clone the repository:
 ```bash
-git clone https://github.com/jontssu/cub3D.git
+git clone https://github.com/LuEklund/Platformer-SFML.git
 ```
 * Open the solution file.
 When the project is open in Visual Studio
